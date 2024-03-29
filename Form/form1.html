@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Form Biodata</title>
+  </head>
+  <style>
+    fieldset {
+        background-color: #eeeeee;
+      }
+      
+    legend {
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+      }
+  </style>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Biodata Pribadi</legend>
+        <form action=# method="post">
+        <table>
+          <tr>
+            <td><label for="nama">Nama</label></td>
+            <td>:</td>
+            <td><input type="text" id="nama" name="nama" value="Cahyo"></td>
+          </tr>
+
+          <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td>:</td>
+            <td>
+              <textarea id="alamat" name="alamat" rows="5" cols="20"
+                placeholder="Masukkan alamat lengkap anda disini"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="ttl">TTL</label></td>
+            <td>:</td>
+            <td>
+              <input type="text" id="ttl" name="ttl">
+              <input type="date">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="kelamin">Jenis Kelamin</label></td>
+            <td>:</td>
+            <td>
+              <input type="radio" id="kelamin" name="kelamin" value="Laki-Laki">
+              <label for="kelamin">Laki-Laki</label>
+              <input type="radio" id="kelamin" name="kelamin" value="Perempuan">
+              <label for="kelamin">Perempuan</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="agama">Agama</label></td>
+            <td>:</td>
+            <td>
+              <select id="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="budha">Budhha</option>
+                <option value="konghucu">Konghucu</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="hobi">Hobby</label></td>
+            <td>:</td>
+            <td>
+              <input type="checkbox" id="hobi" name="hobi" value="Olahraga">
+              <label for="Olahraga">Olahraga</label>
+              <input type="checkbox" id="hobi" name="hobi" value="Belajar">
+              <label for="Belajar">Belajar</label>
+              <input type="checkbox" id="hobi" name="hobi" value="Tidur">
+              <label for="Tidur">Tidur</label>
+              <input type="checkbox" id="hobi" name="hobi" value="Masak">
+              <label for="Masak">Masak</label>
+              <input type="checkbox" id="hobi" name="hobi" value="Menghayal">
+              <label for="Menghayal">Menghayal</label>
+              <input type="checkbox" id="hobi" name="hobi" value="Tidak Ada">
+              <label for="Tidak Ada">Tidak Ada</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="motto">Motto</label></td>
+            <td>:</td>
+            <td>
+              <textarea id="motto" name="motto" rows="5" cols="20"
+                placeholder="Isikan motto anda disini"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="reset" value="Reset">
+              <input type="submit" value="Submit">
+            </td>
+          </tr>
+        </table>
+        </form>
+      </fieldset>
+    </form>
+  </body>
+</html>
