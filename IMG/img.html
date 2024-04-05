@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>HTML IMAGE</title>
+    </head>
+
+    <body>
+        <h2>My Waifu</h2>
+        <h2>Yorha 2B 😍</h2>
+        <!-- <p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <img src="Assets/Yorha_2B.jpg" alt="Yorha 2B" style="float:right;width:500px;" >
+        </a> -->
+        <picture>
+            <source media="(min-width: 650px)" srcset="Assets/Yorha_2B(0).jpg">
+            <source media="(min-width: 465px)" srcset="Assets/Yorha_2B(1).jpg">
+            <img src="Assets/Yorha_2B.jpg" style="width:auto;float:right;border:2px solid black;" id="myDarling">
+          </picture>
+        <b>YoRHa 2B</b> dari NieR: Automata sering dianggap sebagai waifu nomor satu karena beberapa alasan.<br>
+        <b>Pertama</b>, desain karakternya yang ikonik dan estetika visual yang menarik banyak perhatian. 
+        Dia memiliki penampilan yang kuat namun elegan yang memadukan unsur-unsur futuristik dan klasik.<br>
+        <b>Kedua</b>, kepribadiannya yang kompleks dan latar belakang ceritanya yang mendalam memberikan dimensi tambahan 
+        yang membuat penggemar terhubung dengannya secara emosional.<br>
+        Selain itu, kemampuan bertarungnya yang luar biasa dan perannya yang penting dalam cerita NieR: Automata 
+        juga menambah daya tariknya sebagai karakter yang kuat dan mandiri.<br>
+        </p>
+        
+        <canvas id="myCanvas" width="200" height="200" style="border:2px solid black">
+        HAYO GAK SUPPORT HAYOOOO</br>
+        Minta dibeliing laptop/pc baru dong.😎</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,200);
+            ctx.stroke();
+        </script>
+
+        <canvas id="myCanvas1" width="200" height="200" style="border:2px solid black;">
+        Ini gambar lingkaran</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas1");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,100,50,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+
+        <canvas id="myCanvas2" width="200" height="200" style="border:2px solid black;">
+        Ini "Hello World"</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello World", 10, 100);
+        </script>
+
+        <canvas id="myCanvas3" width="200" height="200" style="border:2px solid black;">
+        Ini "Hello World" versi lain</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas3");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World",10,100);
+        </script>
+
+        <canvas id="myCanvas4" width="200" height="200" style="border:2px solid black;">
+        Ini Warna</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas4");
+            var ctx = c.getContext("2d");
+            // Create gradient
+            var grd = ctx.createLinearGradient(0,100,200,0);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"blue");
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,170,170);
+        </script>
+
+        <canvas id="myCanvas5" width="200" height="200" style="border:2px solid black;">
+        Ini Warna versi lain</canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas5");
+            var ctx = c.getContext("2d");
+            
+            // Create gradient
+            var grd = ctx.createRadialGradient(100,100,5,90,90,120);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"blue");
+            
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,170,170);
+        </script>
+
+        <canvas id="myCanvas6" width="200" height="300" style="border:2px solid black;">
+            Yah gak support
+        </canvas>
+
+        <p><button onclick="myDarling()">Coba</button></p>
+
+        <script>
+            function myDarling() {
+            var c = document.getElementById("myCanvas6");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("myDarling");
+            ctx.drawImage(img,5,10);
+}
+        </script>
+    </body>
+</html>
