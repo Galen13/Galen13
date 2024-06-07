@@ -1,0 +1,72 @@
+header {
+    text-align: center;
+  }
+  
+nav {
+    background-color: #333;
+    color: #c41e1e;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .container {
+    margin-left: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #f1c40f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveBox 4s infinite;
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    animation: rotateGradient 4s infinite;
+  }
+
+  @keyframes moveBox {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+      transform: translate(calc(-50% + 100px), -50%) rotate(90deg);
+    }
+    50% {
+      transform: translate(calc(-50% + 100px), calc(-50% + 100px)) rotate(180deg);
+    }
+    75% {
+      transform: translate(-50%, calc(-50% + 100px)) rotate(270deg);
+    }
+  }
+
+  @keyframes rotateGradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
